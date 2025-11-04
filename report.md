@@ -114,12 +114,16 @@ http://5.181.187.10/api/attack?username=astro&password=phonix97&host=194.45.197.
 
 **Example iptables rules (test in lab first):**
 
+
+
+# Allow limited TCP connections to FiveM port (example 
 ```bash
-# Allow limited TCP connections to FiveM port (example - test before applying in production)
+- test before applying in production)
 iptables -A INPUT -p tcp --dport 30120 -m conntrack --ctstate NEW -m limit --limit 100/min -j ACCEPT
 iptables -A INPUT -p tcp --dport 30120 -j DROP
-
+```
 # Simple UDP connection rate limiting example
+```bash
 iptables -A INPUT -p udp --dport 30120 -m recent --name fivem --set
 iptables -A INPUT -p udp --dport 30120 -m recent --name fivem --update --seconds 10 --hitcount 20 -j DROP
 ```
