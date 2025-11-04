@@ -13,12 +13,16 @@ This repository contains a comprehensive cybersecurity report analyzing an illeg
 
 ## Quick Start
 
-```bash
+
 # Clone the repository
+```bash
 git clone https://github.com/your-username/cybersecurity-ddos-report.git
-
+```
 # Navigate to the project
+```bash
 cd cybersecurity-ddos-report
-
+```
 # View the main report
+```bash
 open report.md
+```
